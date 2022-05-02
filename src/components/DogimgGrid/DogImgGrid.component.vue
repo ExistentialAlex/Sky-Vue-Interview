@@ -1,8 +1,8 @@
 <script lang="ts">
-import DogImg from "@/components/DogImg.component.vue";
+import DogImg from "@/components/DogImg/DogImg.component.vue";
 import type { IDogImg } from "@/interfaces/dogImg.interface";
 import type { PropType } from "vue";
-import { defineComponent } from "vue-demi";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "DogImgGrid",
@@ -23,6 +23,7 @@ export default defineComponent({
       :breed="dog.breed"
       :img="dog.img"
       :key="dog.id"
+      data-test="dog-img"
     />
   </div>
 </template>

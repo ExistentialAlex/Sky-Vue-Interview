@@ -1,6 +1,6 @@
 <script lang="ts">
 import { dogApiInstance } from "@/main";
-import DogImgGrid from "@/components/DogImgGrid.component.vue";
+import DogImgGrid from "@/components/DogimgGrid/DogImgGrid.component.vue";
 import { defineComponent } from "vue";
 import type { IDogImg } from "@/interfaces/dogImg.interface";
 

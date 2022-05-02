@@ -79,6 +79,7 @@ export default defineComponent({
             :style="{ color: 'var(--clr-primary)' }"
             :icon="solidHeart"
             size="2x"
+            data-test="showFill"
           />
           <font-awesome-icon
             :style="{ color: 'var(--bg-dark)' }"

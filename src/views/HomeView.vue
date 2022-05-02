@@ -1,6 +1,6 @@
 <script lang="ts">
 import { dogApiInstance } from "@/main";
-import DogImg from "@/components/DogImg.component.vue";
+import DogImg from "@/components/DogImg/DogImg.component.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { defineComponent } from "vue";
