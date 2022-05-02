@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from "vue-router";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { dogApiInstance } from "./main";
 import { defineComponent } from "vue";
 
@@ -17,6 +17,7 @@ export default defineComponent({
       currentImg: "",
       faHeart: faHeart,
       faHouse: faHouse,
+      faMagnifyingGlass: faMagnifyingGlass,
       dogBreeds,
     };
   },
@@ -41,8 +42,9 @@ export default defineComponent({
 <template>
   <nav class="navbar">
     <h1>Sky Dog</h1>
+    <font-awesome-icon :icon="faMagnifyingGlass" size="2x"></font-awesome-icon>
     <select @change="onSelectBreed($event)">
-      <option value=""></option>
+      <option value="">Select a breed...</option>
       <option v-for="breed in dogBreeds" :key="breed" :value="breed">
         {{ breed }}
       </option>
@@ -55,7 +57,7 @@ export default defineComponent({
     </RouterLink>
   </nav>
   <div class="content">
-    <RouterView />
+    <RouterView :key="$route.path" />
   </div>
 </template>
 

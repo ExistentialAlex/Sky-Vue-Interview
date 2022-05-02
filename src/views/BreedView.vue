@@ -34,7 +34,7 @@ export default defineComponent({
 
 <template>
   <main>
-    <DogImgGrid :dogs="dogs" />
+    <DogImgGrid :key="$route.params.id.toString()" :dogs="dogs" />
   </main>
 </template>
 
