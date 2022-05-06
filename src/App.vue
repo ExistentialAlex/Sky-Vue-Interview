@@ -2,7 +2,11 @@
 import { RouterLink, RouterView } from "vue-router";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faHouse, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHouse,
+  faMagnifyingGlass,
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
 import { dogApiInstance } from "./main";
 import { defineComponent } from "vue";
 
@@ -18,6 +22,7 @@ export default defineComponent({
       faHeart: faHeart,
       faHouse: faHouse,
       faMagnifyingGlass: faMagnifyingGlass,
+      faPlus: faPlus,
       dogBreeds,
     };
   },
@@ -54,6 +59,9 @@ export default defineComponent({
     </RouterLink>
     <RouterLink class="btn navbar__btn" :to="'/likes'">
       <font-awesome-icon :icon="faHeart" size="2x"></font-awesome-icon>
+    </RouterLink>
+    <RouterLink class="btn navbar__btn" :to="'/add'">
+      <font-awesome-icon :icon="faPlus" size="2x"></font-awesome-icon>
     </RouterLink>
   </nav>
   <div class="content">

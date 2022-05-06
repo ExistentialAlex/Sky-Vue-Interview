@@ -22,6 +22,11 @@ const router = createRouter({
       name: "breed",
       component: () => import("../views/BreedView.vue"),
     },
+    {
+      path: "/add",
+      name: "add",
+      component: () => import("../views/AddDogView.vue"),
+    },
   ],
 });
 

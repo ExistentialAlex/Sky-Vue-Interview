@@ -59,6 +59,35 @@ export class DogApi {
     }
   }
 
+  public async addDogImg(
+    imgName: string,
+    breed: string,
+    imgUrl: string
+  ): Promise<boolean> {
+    try {
+      if (!imgName || imgName === "") {
+        throw "No image name provided!";
+      }
+
+      if (!breed || breed === "") {
+        throw "No breed provided!";
+      }
+
+      if (!imgUrl || imgUrl === "") {
+        throw "No image url provided!";
+      }
+
+      console.log(
+        `Adding img with name '${imgName}', breed '${breed}' and img url '${imgUrl}'`
+      );
+
+      return true;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+  }
+
   private convertBreedList(breeds: any): string[] {
     const breedList: string[] = [];
 
